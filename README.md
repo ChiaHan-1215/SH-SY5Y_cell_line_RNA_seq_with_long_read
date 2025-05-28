@@ -1,6 +1,7 @@
 Goal:
 
 The data is from paper: https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-021-08261-2#availability-of-data-and-materials
+
 Download the short read and naopore long-read RNA-seq SH-SY5Y cell line for futher analysis.
 
 Data:
