@@ -15,19 +15,34 @@ Steps:
 - alignment
 
 ```
-    ml minimap2/
+#!/bin/bash
 
-    align sperated by control and differentiated fastqs files
 
-    Control
-    
-    flair.py align -g ${REF} -r U1_PCS_109_2019_06_13_106_REVD.fastq.gz  U2_PCS_109_2019_06_13_106_REVD.fastq.gz\
- U3_PCS_109_2019_06_13_106_REVD.fastq.gz\
- --threads 12 --quality 30 
+source ~/bin/myconda
 
-    Diff
-    
-    flair.py align -g ${REF} -r U1_PCS_109_2019_06_13_106_REVD.fastq.gz  U2_PCS_109_2019_06_13_106_REVD.fastq.gz  U3_PCS_109_2019_06_13_106_REVD.fastq.gz --threads 12 --quality 30 
+ml minimap2
 
+
+REF=../../references_Homo_sapiens_assembly38_noALT_noHLA_noDecoy.fasta
+
+
+flair.py align -g ${REF} -r U1_PCS_109_2019_06_13_106_REVD.fastq.gz  U2_PCS_109_2019_06_13_106_REVD.fastq.gz  U3_PCS_109_2019_06_13_106_REVD.fastq.gz\
+ --threads 12 --quality 30 && echo finned
+
+mv flair.aligned.bed Untreated_SY5Y_aligned.bed
+
+rm flair*
+
+flair.py align -g ${REF} -r D1_PCS_109_2019_06_13_106_REVD.fastq.gz D2_PCS_109_2019_06_13_106_REVD.fastq.gz D3_PCS109_2019_06_17_106_REVD.fastq.gz\
+ --threads 12 --quality 30 echo finned
+
+mv flair.aligned.bed Differented_SY5Y_aligned.bed
+
+rm flair*
 
 ```
+
+- Correct
+
+
+
