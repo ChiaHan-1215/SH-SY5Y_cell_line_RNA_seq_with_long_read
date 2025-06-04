@@ -8,6 +8,8 @@ Data:
 
 fastq files location: in European Nucleotide Archive (ENA, short reads: PRJEB44501, long reads: PRJEB44502)
 
+THe long read and short read BAM files
+
 BAM files in T-drive Mila's lab.
 
 
