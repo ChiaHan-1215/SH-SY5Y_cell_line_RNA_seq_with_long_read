@@ -22,5 +22,5 @@ short read:
   salmon quantifiy isoform TPM by textimport
 
 long read:
-  Minimap2
-  flair 
+  `minimap2_align.swarm`: The swarm file for aligning Nanopre long-read cDNA to hg38 using minimap2 with samtools to output sorted BAM files
+  `flair` :  the scirtpt to run flair to deteting isoform  
