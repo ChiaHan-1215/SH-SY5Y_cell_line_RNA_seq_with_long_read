@@ -20,6 +20,7 @@ Code:
 short read:
   STAR align 
   salmon quantifiy isoform TPM by textimport
+  `plotting_test_rs578.R`: plotting target SNP read count ratio to detect allelic imbalance.
 
 long read:
   `minimap2_align.swarm`: The swarm file for aligning Nanopre long-read cDNA to hg38 using minimap2 with samtools to output sorted BAM files
