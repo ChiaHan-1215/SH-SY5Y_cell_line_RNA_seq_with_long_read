@@ -9,11 +9,10 @@ library(ggplot2)
 
 # Read counts at the rs578776 position in RNA-seq BAM files were obtained using IGV
 df <- data.frame(
-  sample_ID=c(paste0('SH_SY5Y_U_',seq(1:3)),paste0('SH_SY5Y_D_',seq(1:3))),
-  read_A=c(689,840,727,1356,1046,1494),
-  read_G=c(710,972,804,1114,930,1193),
-  total=c(1400,1813,1531,2474,1980,2687)
-  
+  sample_ID=c(paste0('SH_SY5Y_U_',seq(1:5)),paste0('SH_SY5Y_D_',seq(1:5))),
+  read_A=c(689,840,727,783,606,1356,1046,1493,545,1010),
+  read_G=c(710,972,804,803,614,1114,930,1193,514,878),
+  total=c(1400,1813,1531,1587,1220,2474,1980,2687,1060,1889)
 )
 
 df$frac_A <- round(df$read_A/df$total * 100,2)
