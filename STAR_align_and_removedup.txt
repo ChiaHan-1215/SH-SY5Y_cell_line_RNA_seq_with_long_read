@@ -1,0 +1,20 @@
+# the code bleow is swarm file
+
+ml star/2.7.10b samtools ; STAR --runThreadN 24 --genomeDir star_index_hg38_99bp --readFilesIn SHSY5Y_S05_U5_R1.fastq.gz SHSY5Y_S05_U5_R2.fastq.gz --outFileNamePrefix Align_hg38/SHSY5Y_S05_U5 --readFilesCommand zcat --sjdbGTFfile gencode.v39.annotation.gtf --sjdbOverhang 99 --quantMode GeneCounts --outSAMtype BAM SortedByCoordinate --twopassMode Basic &&  echo finfin SHSY5Y_S05_U5
+ml star/2.7.10b samtools ; STAR --runThreadN 24 --genomeDir star_index_hg38_99bp --readFilesIn SHSY5Y_S04_U4_R1.fastq.gz SHSY5Y_S04_U4_R2.fastq.gz --outFileNamePrefix Align_hg38/SHSY5Y_S04_U4 --readFilesCommand zcat --sjdbGTFfile gencode.v39.annotation.gtf --sjdbOverhang 99 --quantMode GeneCounts --outSAMtype BAM SortedByCoordinate --twopassMode Basic &&  echo finfin SHSY5Y_S04_U4
+
+
+# remove duplication 
+
+
+ml star/2.7.10b 
+ml picard/2.26.11
+
+for i in *.bam
+do
+OUTPUT=$(echo $i | sed 's/.bam//g')
+picard MarkDuplicates I=${i} O=${OUTPUT}.md.bam PROGRAM_RECORD_ID=null  MAX_RECORDS_IN_RAM=500000\
+ SORTING_COLLECTION_SIZE_RATIO=0.25 M=${OUTPUT}_metrics.txt\
+ ASSUME_SORT_ORDER=coordinate TAGGING_POLICY=DontTag OPTICAL_DUPLICATE_PIXEL_DISTANCE=100
+echo "FIN ONE"
+done
