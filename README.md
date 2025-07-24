@@ -14,6 +14,9 @@ BAM files in T-drive Mila's lab
   - Long-read: `/ifs/DCEG/Branches/LTG/Prokunina/Long_read_RNA-seq_hg38/SH-SY5Y_nanopore_RNA-seq_bams`
   - short-read: `/ifs/DCEG/Branches/LTG/Prokunina/CCLE and other RNA-seq Bam files/SH-SY5Y_short_read_RNA_seq_bams_hg38`
 
+Featurecount of CHRNA5 region result:
+
+
 
 Code:
 
@@ -25,3 +28,8 @@ short read:
 long read:
   `minimap2_align.swarm`: The swarm file for aligning Nanopre long-read cDNA to hg38 using minimap2 with samtools to output sorted BAM files
   `flair` :  the scirtpt to run flair to deteting isoform  
+
+
+isoform counts by Featurecount:
+
+
