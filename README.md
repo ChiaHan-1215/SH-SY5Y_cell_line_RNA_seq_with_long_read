@@ -24,6 +24,7 @@ short read:
   STAR align 
   salmon quantifiy isoform TPM by textimport
   `plotting_test_rs578.R`: plotting target SNP read count ratio to detect allelic imbalance.
+  
   `SHSY5Y_featurecount_CHRNA5.R`: plotting featurecount result of CHRNA5 isoform junction counts.
   
 
